@@ -1,0 +1,35 @@
+--------------------------------------------------------------------------------------------------------
+ PARÁMETROS DE LA RED: GENERADOR (entrenado)
+--------------------------------------------------------------------------------------------------------
+ Parámetro             Forma               Cantidad       Media       Desv.        Mín.        Máx.
+--------------------------------------------------------------------------------------------------------
+ red.0.weight          (256, 100)            25,600     -0.0001      0.0591     -0.1474      0.1589
+ red.0.bias            (256,)                   256      0.0027      0.0610     -0.1385      0.1484
+ red.2.weight          (512, 256)           131,072      0.0006      0.0378     -0.1123      0.1186
+ red.2.bias            (512,)                   512     -0.0009      0.0359     -0.0626      0.0621
+ red.3.weight          (512,)                   512      1.0009      0.0189      0.9513      1.0676
+ red.3.bias            (512,)                   512      0.0015      0.0205     -0.0564      0.0520
+ red.5.weight          (1024, 512)          524,288     -0.0025      0.0277     -0.0898      0.0981
+ red.5.bias            (1024,)                1,024     -0.0002      0.0258     -0.0441      0.0440
+ red.6.weight          (1024,)                1,024      1.0555      0.0216      0.9899      1.1274
+ red.6.bias            (1024,)                1,024      0.0044      0.0160     -0.0493      0.0640
+ red.8.weight          (784, 1024)          802,816     -0.0086      0.0217     -0.0953      0.0846
+ red.8.bias            (784,)                   784     -0.0105      0.0192     -0.0500      0.0337
+--------------------------------------------------------------------------------------------------------
+ TOTAL de parámetros entrenables: 1,489,424
+--------------------------------------------------------------------------------------------------------
+ Estructura:
+   Generador(
+     (red): Sequential(
+       (0): Linear(in_features=100, out_features=256, bias=True)
+       (1): LeakyReLU(negative_slope=0.2, inplace=True)
+       (2): Linear(in_features=256, out_features=512, bias=True)
+       (3): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+       (4): LeakyReLU(negative_slope=0.2, inplace=True)
+       (5): Linear(in_features=512, out_features=1024, bias=True)
+       (6): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+       (7): LeakyReLU(negative_slope=0.2, inplace=True)
+       (8): Linear(in_features=1024, out_features=784, bias=True)
+       (9): Tanh()
+     )
+   )

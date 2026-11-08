@@ -1,0 +1,13 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Dataset descargado (MNIST pesa ~60 MB; se vuelve a descargar solo al ejecutar)
+data/
